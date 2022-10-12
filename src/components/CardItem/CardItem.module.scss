@@ -1,0 +1,27 @@
+.carditem {
+    position: relative;
+    display: flex;
+    height: 10rem;
+    width: calc(50% - 1rem);
+    border: 1px solid #000;
+
+    &__number {
+        margin: auto;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    &__delete {
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+        font-size: 1.5rem;
+        transform: rotateZ(45deg);
+        transition: color .15s;
+        cursor: pointer;
+
+        &:hover {
+            color: #ca0000;
+        }
+    }
+}

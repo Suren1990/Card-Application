@@ -1,0 +1,20 @@
+html, body, #root {
+    height: 100%;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 90rem;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+}

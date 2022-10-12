@@ -1,0 +1,14 @@
+.cardlist {
+    flex: 1 0 auto;
+    max-height: calc(100% - 7.375rem);
+    overflow-y: auto;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+}
