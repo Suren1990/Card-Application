@@ -19,10 +19,6 @@ const Main = () => {
             setCards(currentArr => {
                 return [...currentArr, uniqueId];
             });
-        } else {
-            setCards(currentArr => {
-                return [...currentArr, uniqueId];
-            });
         }
     };
 
