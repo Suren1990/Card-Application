@@ -19,8 +19,9 @@ const Main = () => {
 
         if (cards.indexOf(uniqueId) === -1) {
             setCards(currentArr => {
-                localStorage.setItem("CardsList", JSON.stringify([...currentArr, uniqueId]));
-                return [...currentArr, uniqueId];
+                const newCurrentArr = [...currentArr, uniqueId];
+                localStorage.setItem("CardsList", JSON.stringify(newCurrentArr));
+                return newCurrentArr;
             });
         }
     };
@@ -28,8 +29,9 @@ const Main = () => {
     const deleteCard = (cardId) => {
         if(cards.length) {
             setCards(currentArr => {
-                localStorage.setItem("CardsList", JSON.stringify(currentArr.filter((item) => item !== cardId)));
-                return currentArr.filter((item) => item !== cardId);
+                const newCurrentArr = currentArr.filter((item) => item !== cardId);
+                localStorage.setItem("CardsList", JSON.stringify(newCurrentArr));
+                return newCurrentArr;
             })
         }
     }
@@ -37,15 +39,16 @@ const Main = () => {
     const sortCards = () => {
         if(cards.length) {
             setCards(currentArr => {
-                localStorage.setItem("CardsList", JSON.stringify([...currentArr].sort((a, b) => a - b)));
-                return [...currentArr].sort((a, b) => a - b);
+                const newCurrentArr = [...currentArr].sort((a, b) => a - b);
+                localStorage.setItem("CardsList", JSON.stringify(newCurrentArr));
+                return newCurrentArr;
             })
         }
     }
 
     useEffect(() => {
         if(cardsStorage) {
-            setCards(cardsStorage);
+            setCards(cardsStorage); 
         }
     }, [])
 
